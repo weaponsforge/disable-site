@@ -68,5 +68,9 @@ Checks lint errors.
 
 Fixes lint errors.
 
+### `gen:randomtext`
+
+Generates a sentence containing random words.
+
 @weaponsforge<br>
 20240708

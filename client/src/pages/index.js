@@ -7,9 +7,9 @@ export async function getStaticProps () {
       title: "Hello, World!",
       background: "/images/rg_inazuma2.jpg",
       paragraphs: [
-        { id: 0, content: "Test content" },
-        { id: 1, content: "Hello" },
-        { id: 2, content: "Heeey" }
+        { id: 0, content: "mito zido vin olah odomu dala nunu unta tomo mani yo yaya hili mi pupu biat ye eleka in Du ya zido dala? unu todo upa mito vin" },
+        { id: 1, content: "Du ya zido dala? da shato mani todo odomu yoyo mi lawa mita muhe kucha beru nye sada zido vin celi nunu in eleka in yoyo yeye vin yo mimi odomu boya nini" },
+        { id: 2, content: "ya biadam mimi unta yeye yoyo aba eleka lawa upa shato unu du da Du ya zido dala? pupu beru nye kucha odomu sama kundala" }
       ]
     }
   }
