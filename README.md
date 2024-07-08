@@ -113,6 +113,7 @@ Add the following GitHub Actions "Secrets" for deploying the development app to 
 
 | GitHub Secret Name | Description |
 | --- | --- |
+| NEXT_PUBLIC_BASE_PATH | GitHub repository name. Review the `NEXT_PUBLIC_BASE_PATH` under the [Installation](#installation) section for more information. |
 | FIREBASE_PROJECT | Firebase project ID |
 | FIREBASE_HOSTING | Firebase Hosting name under the `FIREBASE_PROJECT` |
 | FIREBASE_TOKEN | Firebase CI token used for deploying the /client app to Firebase Hosting. This is obtained by signing-in to the firebase CLI with `"firebase login:ci"`. |
