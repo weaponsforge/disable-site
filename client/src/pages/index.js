@@ -5,7 +5,7 @@ export async function getStaticProps () {
   return {
     props: {
       title: "Hello, World!",
-      background: "/images/rg_inazuma2.jpg",
+      background: "./images/rg_inazuma2.jpg",
       paragraphs: [
         { id: 0, content: "mito zido vin olah odomu dala nunu unta tomo mani yo yaya hili mi pupu biat ye eleka in Du ya zido dala? unu todo upa mito vin" },
         { id: 1, content: "Du ya zido dala? da shato mani todo odomu yoyo mi lawa mita muhe kucha beru nye sada zido vin celi nunu in eleka in yoyo yeye vin yo mimi odomu boya nini" },
