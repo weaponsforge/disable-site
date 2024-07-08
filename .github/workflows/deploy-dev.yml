@@ -36,7 +36,7 @@ jobs:
       - name: Prepare Firebase Deployment
         run: |
           cd client
-          sed -i -e "s/<FIREBASE_PROJECT>/${{ secrets.FIREBASE_APP }}/g" .firebaserc
+          sed -i -e "s/<FIREBASE_PROJECT>/${{ secrets.FIREBASE_PROJECT }}/g" .firebaserc
           sed -i -e "s/<FIREBASE_HOSTING>/${{ secrets.FIREBASE_HOSTING }}/g" .firebaserc
       - name: Archive Development Artifact
         uses: actions/upload-artifact@v3
