@@ -46,6 +46,42 @@ The following dependencies are used for this project. Feel free to experiment us
    npm run dev
    ```
 
+## Deployment
+
+### Firebase Hosting
+
+Follow these steps for manually deploying the static site to Firebase Hosting.
+
+Create the **GitHub Actions Secrets** described in the [GitHub Actions](#github-actions) section to automatically deploy the `dev` branch to Firebase Hosting on every new push or update to the `dev` branch.
+
+#### Requirements
+
+1. Firebase project with Firebase Hosting pre-configured and set-up.
+2. Firebase CLI (Firebase Admin)
+   - Installed preferrably using the `"npm install -g firebase-tools"` command.
+
+#### Steps
+
+1. Open the `firebaserc` file in the client directory.
+2. Replace the `"<FIREBASE_PROJECT_NAME>"` key with a target Firebase project.
+3. Replace the `"<FIREBASE_HOSTING_NAME_UNDER_FIREBASE_PROJECT>"` key with a target Firebase Hosting name under the `"<FIREBASE_PROJECT_NAME>"`.
+4. Build the static site.<br>
+`npm run build`
+5. Login to your Firebase account using the Firebase CLI.<br>
+`firebase login`
+6. Deploy the static site.<br>
+`firebase deploy --only hosting`
+
+## GitHub Actions
+
+Add the following GitHub Actions "Secrets" for deploying the development app to Firebase Hosting
+
+| GitHub Secret Name | Description |
+| --- | --- |
+| FIREBASE_PROJECT | Firebase project ID |
+| FIREBASE_HOSTING | Firebase Hosting name under the `FIREBASE_PROJECT` |
+| FIREBASE_TOKEN | Firebase CI token used for deploying the /client app to Firebase Hosting. This is obtained by signing-in to the firebase CLI with `"firebase login:ci"`. |
+
 ## Available Scripts
 
 ### `npm run dev`
