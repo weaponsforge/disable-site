@@ -46,6 +46,41 @@ The following dependencies are used for this project. Feel free to experiment us
    npm run dev
    ```
 
+2. Create a new page with custom modal dialog text.
+   - Create a new page component under the `/src/pages` directory.
+   - Export `getStaticProps()` function from the new page component. The function should construct and return the `title`, `background` and `paragaraphs[]` key-value pairs.
+
+      ```jsx
+       export async function getStaticProps () {
+         return {
+           props: {
+             title: "Hello, World!",
+             background: "/images/rg_inazuma2.jpg",
+             paragraphs: [
+               { id: 0, content: "Sample text 1" },
+               { id: 1, content: "Sample text 2" },
+              ...
+            ]
+          }
+        }
+      }
+      ```
+   - Import and use the `NoticePage` component into the component created from the previous step. It should receive the `title`. `backgroud` and `paragraphs` props from the `getStaticProps()` function, and pass them to the `NoticePage` component. For example:
+
+      ```jsx
+      function App ({ title, paragraphs, background }) {
+        return (
+          <NoticePage
+            title={title}
+            paragraphs={paragraphs}
+            background={background}
+            Component={LinkTo}
+          />
+        )
+      }
+      ```
+
+
 ## Deployment
 
 ### Firebase Hosting
